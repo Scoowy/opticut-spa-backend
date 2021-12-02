@@ -1,6 +1,6 @@
 import express from "express";
 import morgan from "morgan";
-import productsRoutes from "./routes/products.routes";
+import routes from "./routes/index.routes";
 
 const app = express();
 
@@ -11,14 +11,6 @@ app.set("port", process.env.PORT || 3000);
 app.use(morgan("dev"));
 
 // Routes
-app.get("/", (req, res) => {
-  const response = {
-    status: "OK",
-    message: "Welcome to OptiCut-SPA Backend",
-  };
-  res.json(response);
-});
-
-app.use("/products", productsRoutes);
+app.use(routes);
 
 export default app;
