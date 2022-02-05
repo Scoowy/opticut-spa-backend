@@ -2,17 +2,19 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 
+import config from "config";
+
 import routes from "./routes/index.routes";
 
 const app = express();
 
 // Configs
-app.set("port", process.env.PORT || 3000);
+app.set("port", config.PORT);
 
 // Middlewares
 app.use(
   cors({
-    origin: "*",
+    origin: config.CORS_ORIGIN,
     optionsSuccessStatus: 200,
   }),
 );

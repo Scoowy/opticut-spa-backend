@@ -1,18 +1,19 @@
 import axios from "axios";
+import config from "config";
 
-const PRODUCTS_URL = "https://opticut-orders-api.herokuapp.com";
+const ORDERS_URL = config.SERVICE_ORDERS_API + "/api";
 
 export const getAllOrders = async () => {
-  const result = await axios.get(`${PRODUCTS_URL}/api/orders`);
+  const response = await axios.get(`${ORDERS_URL}/orders`);
 
-  return result.data;
+  return response.data;
 };
 
 export const realizeOrder = async (order) => {
   console.log(order);
   try {
-    const result = await axios.post(`${PRODUCTS_URL}/api/orders`, order);
-    return result.data;
+    const response = await axios.post(`${ORDERS_URL}/orders`, order);
+    return response.data;
   } catch (e) {
     console.log(e.message);
     return { message: e.message };

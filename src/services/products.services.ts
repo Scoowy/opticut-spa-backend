@@ -1,9 +1,10 @@
 import axios from "axios";
+import config from "config";
 
-const PRODUCTS_URL = "https://opticut-products-api.herokuapp.com";
+const PRODUCTS_URL = config.SERVICE_PRODUCTS_API + "/api";
 
 export const getAllPlanks = async () => {
-  const respuesta = await axios.get(`${PRODUCTS_URL}/api/products/planks`);
+  const response = await axios.get(`${PRODUCTS_URL}/products/planks`);
 
-  return respuesta.data;
+  return response.data;
 };
