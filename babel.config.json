@@ -11,16 +11,3 @@
     ["@babel/preset-typescript", {}]
   ]
 }
-
-// {
-//   "presets": [
-//     [
-//       "@babel/preset-env",
-//       {
-//         "corejs": "3.19",
-//         "useBuiltIns": "usage",
-//         "targets": "> 1%, last 2 versions, not dead"
-//       }
-//     ]
-//   ]
-// }
