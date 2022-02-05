@@ -74,3 +74,4 @@ fabric.properties
 node_modules/
 dist/
 build/
+.scannerwork/
