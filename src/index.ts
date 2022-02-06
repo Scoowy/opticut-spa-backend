@@ -1,6 +1,7 @@
 import app from "./app";
+import config from "./config/config";
 
 // Up Server
-app.listen(app.get("port"), () => {
-  console.log(`OptiCut-SPA Backend listening at port ${app.get("port")}`);
+app.listen(config.PORT, () => {
+  console.log(`OptiCut-SPA Backend listening at port ${config.PORT}`);
 });

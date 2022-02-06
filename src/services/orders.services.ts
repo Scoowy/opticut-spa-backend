@@ -1,5 +1,5 @@
 import axios from "axios";
-import config from "../config";
+import config from "../config/config";
 
 const ORDERS_URL = config.SERVICE_ORDERS_API + "/api";
 
